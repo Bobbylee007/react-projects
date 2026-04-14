@@ -61,6 +61,7 @@ body {
     color: var(--clr-gray-1);
     line-height: 1.5;
     font-size: 0.875rem;
+    padding: auto;
 }
 
 h1,
@@ -109,17 +110,11 @@ a {
 
 .container {
     display: grid;
-    place-content: center;
+    place-items: center;
     margin: 54px auto;
     gap: 16px;
     background: var(--clr-gray-9);
 }
-
-section.container{
-    width: 400px;
-}
-
-
 
 .item {
     background: var(--clr-white);
@@ -168,7 +163,6 @@ section.container{
     margin-inline-end: 16px;
     cursor: pointer;
     transition: var(--trans);
-
 }
 
 .btn:hover {
@@ -288,6 +282,17 @@ img {
     object-fit: cover;
 }
 
+/* ====  projects UI =====   */
+
+
+article .single-tour{
+    width: 700px;
+}
+.tour-info{
+  
+    margin: 16px, 12px;
+    padding: 16px, 24px;
+}
 
 @media screen and (min-width:768px) {
     h1 {
