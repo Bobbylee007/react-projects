@@ -37,3 +37,7 @@
 #### React Router
 
 12. Links And pages
+
+- react icon
+npm i react-icons --save
+
