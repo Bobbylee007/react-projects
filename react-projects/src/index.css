@@ -64,6 +64,13 @@ body {
     padding: auto;
 }
 
+main {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+
 h1,
 h2,
 h3,
@@ -114,7 +121,8 @@ a {
     place-items: center;
     margin: 54px auto;
     gap: 16px;
-    background: var(--clr-gray-9);
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 
 .item {
@@ -192,75 +200,11 @@ a {
 .user div,
 h4,
 a {
-    text-align: center ;
+    text-align: center;
     margin-block-start: 0.5rem;
     margin-inline-start: 0.5rem;
 }
 
-.modal {
-    position: absolute;
-    top: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--clr-white);
-    display: inline-block;
-    padding: 0.25em 1rem;
-    border-radius: var(--rd-corners);
-    text-transform: capitalize;
-
-
-}
-
-
-.modal p {
-    margin-bottom: 0;
-    color: var(--clr-red-dark);
-}
-
-.form {
-    display: grid;
-    background: var(--clr-white);
-    max-width: var(--fixed-width);
-    margin: 0 auto;
-    margin-bottom: 4rem;
-    padding: 1rem 2rem;
-    border-radius: var(--rd-corners);
-    justify-items: center;
-    align-items: center;
-}
-
-.form input {
-    background: var(--clr-gray-10);
-    border-color: transparent;
-    border-radius: var(--rd-corners);
-    padding: 0.25rem 0.5rem;
-
-}
-
-.form .form-control label {
-    font-weight: 700;
-
-}
-
-.form-control {
-    margin: 0.5rem 0;
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    align-items: center;
-}
-
-.form button {
-    display: inline-block;
-    background: var(--clr-black);
-    color: var(--clr-white);
-    border-color: transparent;
-    margin-top: 1rem;
-    letter-spacing: var(--spacing);
-    padding: 0.15rem 0.25rem;
-    text-transform: capitalize;
-    border-radius: var(--rd-corners);
-    cursor: pointer;
-}
 
 .nav-links {
     max-width: var(--max-width);
@@ -285,17 +229,18 @@ img {
 /* =========  projects UI ====================   */
 
 
-/*  Tour UI
- =====   */
+/*=================  Tour UI=========   */
 
-article .single-tour{
+article .single-tour {
     width: 700px;
 }
-.tour-info{
-  
+
+.tour-info {
+
     margin: 16px, 12px;
     padding: 16px, 24px;
 }
+
 /*  Tour UI End  */
 
 
@@ -308,11 +253,19 @@ article .single-tour{
     box-shadow: var(--light-shadow);
     transition: var(--trans);
     text-align: center;
+    width: 360px;
 
     &:hover {
         box-shadow: var(--dark-shadow);
     }
 
+}
+
+.title {
+    width: var(--fixed-width);
+    padding: auto;
+    text-align: center;
+    margin-bottom: 4rem;
 }
 
 .img-container {
@@ -408,14 +361,90 @@ article .single-tour{
     color: var(--clr-primary-1);
 }
 
+/*  Reviews End    */
 
-/* style SVG  */
+
+/*======= SVG ===== */
 /* .icon{
     font-size: 4rem;
     color: red;
 } */
+/*======= SVG End ===== */
 
-/*  Reviews End    */
+
+
+/*=======       Modal       =========*/
+.modal {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--clr-white);
+    display: inline-block;
+    padding: 0.25em 1rem;
+    border-radius: var(--rd-corners);
+    text-transform: capitalize;
+
+
+}
+
+.modal p {
+    margin-bottom: 0;
+    color: var(--clr-red-dark);
+}
+
+/*=======       Modal End      =========*/
+
+
+/*=======       Form       =========*/
+.form {
+    display: grid;
+    background: var(--clr-white);
+    max-width: var(--fixed-width);
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    padding: 1rem 2rem;
+    border-radius: var(--rd-corners);
+    justify-items: center;
+    align-items: center;
+}
+
+.form input {
+    background: var(--clr-gray-10);
+    border-color: transparent;
+    border-radius: var(--rd-corners);
+    padding: 0.25rem 0.5rem;
+
+}
+
+.form .form-control label {
+    font-weight: 700;
+
+}
+
+.form-control {
+    margin: 0.5rem 0;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+}
+
+.form button {
+    display: inline-block;
+    background: var(--clr-black);
+    color: var(--clr-white);
+    border-color: transparent;
+    margin-top: 1rem;
+    letter-spacing: var(--spacing);
+    padding: 0.15rem 0.25rem;
+    text-transform: capitalize;
+    border-radius: var(--rd-corners);
+    cursor: pointer;
+}
+
+/*=======       Form End       =========*/
+
+
 
 
 
@@ -431,25 +460,33 @@ article .single-tour{
     h3 {
         font-size: 1.75rem;
     }
-     body{
+
+    body {
         font-size: 1rem;
-     }
+    }
 
-     h1,h2,h3,h4,h5{
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
         line-height: 1;
-     }
+    }
 
-section{
-    width: 90vw;
-    margin: 0 auto;
-    max-width: var(--max-width);
-}
+    section {
+        width: 90vw;
+        margin: 0 auto;
+        max-width: var(--max-width);
+    }
 
     .container {
-        grid-template-columns: repeat(auto-fit, minmax(250, 1fr));
-        gap: 8px;
+        width: var(--max-width);
+        display: grid;
         place-items: center;
-        padding-inline: 2rem;
+        margin: 54px auto;
+        gap: 16px;
+        padding-top: 16px;
+        padding-bottom: 16px;
     }
 
     .users {
@@ -495,6 +532,7 @@ section{
         text-align: center;
         margin-top: 5rem;
         place-items: center;
+        padding:32px, 16px;
     }
 
     .btn {

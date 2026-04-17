@@ -1,22 +1,19 @@
 import React from "react";
-import "./styles.css";
 import Review from './Review'
 
 const Setup = () => {
   return (
     <>
       <main>
-        <section>
-             <div className="container">
+        <section className="container">
+          <div>
             <div className="title">
-                <h2>our reviews</h2>
-                <div className="underline"></div>
+              <h2>our reviews</h2>
+              <div className="underline"></div>
             </div>
-        </div>
-        <Review />
+          </div>
+          <Review />
         </section>
-       
-       
       </main>
     </>
   );

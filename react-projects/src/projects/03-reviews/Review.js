@@ -35,8 +35,14 @@ const Review = () => {
   };
 
   const randomPerson = () =>{
-    // console.log(Math.random())
-    let randomNumber =Math.random()
+    let randomNumber =Math.floor(Math.random() * people.length)
+    if(randomNumber === index){
+      randomNumber = index + 1
+    }
+    // this will avoid repeatition
+    setIndex(checkNumber(randomNumber))
+   console.log(randomNumber);
+    
   }
 
 
