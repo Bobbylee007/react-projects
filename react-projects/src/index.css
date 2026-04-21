@@ -62,6 +62,7 @@ body {
     line-height: 1.5;
     font-size: 0.875rem;
     padding: auto;
+    place-items: center;
 }
 
 main {
@@ -226,11 +227,12 @@ img {
     width: auto;
 }
 
-/* =========  projects UI ====================   */
 
 
-/*=================  Tour UI=========   */
+/* ==============================  projects UI ====================================================   */
 
+
+/*=================  Tour UI  ============================   */
 article .single-tour {
     width: 700px;
 }
@@ -240,7 +242,6 @@ article .single-tour {
     margin: 16px, 12px;
     padding: 16px, 24px;
 }
-
 /*  Tour UI End  */
 
 
@@ -327,8 +328,6 @@ article .single-tour {
 .info {
     margin-bottom: 0.75rem;
 }
-
-
 .prev-btn,
 .next-btn {
     color: var(--clr-primary-7);
@@ -360,20 +359,19 @@ article .single-tour {
     background: var(--clr-primary-5);
     color: var(--clr-primary-1);
 }
-
 /*  Reviews End    */
 
 
 /*======= SVG ===== */
-/* .icon{
+.icon{
     font-size: 4rem;
     color: red;
-} */
+}
 /*======= SVG End ===== */
 
 
 
-/*=======       Modal       =========*/
+/*============= Modal  =============*/
 .modal {
     position: absolute;
     top: 1rem;
@@ -392,11 +390,10 @@ article .single-tour {
     margin-bottom: 0;
     color: var(--clr-red-dark);
 }
+/*======= Modal End=========*/
 
-/*=======       Modal End      =========*/
 
-
-/*=======       Form       =========*/
+/*=============   Form   =============*/
 .form {
     display: grid;
     background: var(--clr-white);
@@ -441,13 +438,58 @@ article .single-tour {
     border-radius: var(--rd-corners);
     cursor: pointer;
 }
-
-/*=======       Form End       =========*/
-
+/*=======   Form End   =========*/
 
 
 
+/*=======  Accordian   =========*/
+main .accordian{
+    width: var(--fixed-width);
+    background-color: var(--clr-gray-9);
+    padding-inline: 0.5rem;
+    padding-block: 1rem;
+    display: grid;
+    place-items: center;
+}
+.question{
+    width: var(--fixed-width);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 8px 4px;
+    box-shadow: var(--light-shadow);
+}
+.info{
+    width: var(--fixed-width);
+    padding: 8px 16px;
+    box-shadow: var(--light-shadow);
+}
+.btn-accordian{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-style: none;
+}
+.btn-accordian .icon{
+    width: 32px;
+    height: 32px;
+    color: red;
+}
+/*=======   Accordian End   =========*/
 
+
+
+/*=======   Menu   =========*/
+
+/*=======   Menu End   =========*/
+
+
+
+
+/*======================================   Reponsiveness  ===========================*/
 @media screen and (min-width:768px) {
     h1 {
         font-size: 4rem;

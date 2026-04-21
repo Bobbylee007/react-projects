@@ -5,9 +5,9 @@ import SingleQuestion from "./Question";
 const Accordian = () => {
     const [questions, setQuestions] = useState(data)
   return (
-    <main className="container">
+    <main className="accordian">
       <h3>questions and answers about login</h3>
-      <section className="info">
+      <section className="">
         {
             questions.map((question)=>{
                 return <SingleQuestion key={question.id} {...question} /> 
