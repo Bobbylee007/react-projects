@@ -65,12 +65,17 @@ body {
     place-items: center;
 }
 
-main {
+/* main {
     min-height: 100vh;
     display: grid;
-    place-items: center;
-}
-
+    place-content: center;
+} */
+        main {
+            width: var(--fixed-width);
+            padding: 32px, 32px;
+            justify-content: center;
+            margin: 0, auto;
+        }
 
 h1,
 h2,
@@ -361,7 +366,6 @@ article .single-tour {
     background: var(--clr-primary-5);
     color: var(--clr-primary-1);
 }
-
 /*  Reviews End    */
 
 
@@ -370,9 +374,7 @@ article .single-tour {
     font-size: 4rem;
     color: red;
 }
-
 /*======= SVG End ===== */
-
 
 
 /*============= Modal  =============*/
@@ -394,7 +396,6 @@ article .single-tour {
     margin-bottom: 0;
     color: var(--clr-red-dark);
 }
-
 /*======= Modal End=========*/
 
 
@@ -443,7 +444,6 @@ article .single-tour {
     border-radius: var(--rd-corners);
     cursor: pointer;
 }
-
 /*=======   Form End   =========*/
 
 
@@ -488,16 +488,23 @@ main .accordian {
     height: 32px;
     color: red;
 }
-
 /*=======   Accordian End   =========*/
 
 
 
 /*=======   Menu   =========*/
-.section-center {
-    width: var(--fixed-width);
-    align-items: center;
+.menu{
+    min-width: 360px;
+    width: 100%;
     justify-content: center;
+    margin: 0 auto;
+    
+}
+.section-center {
+    min-width: 360px;
+    width: var(--fixed-width);
+    display: grid;
+    place-content: center, center;
     padding-top: 16px;
 }
 
@@ -557,10 +564,72 @@ main .accordian {
         border: 1px solid var(--clr-red-light);
     }
 }
-
 /*=======   Menu End   =========*/
 
+/*=======   Tabs   =========*/
 
+.tabs-section {
+    margin-top: 64px;
+    width: var(--fixed-width);
+}
+
+.jobs-center {
+    width: var(--fixed-width);
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 64px;
+    margin: 64px;
+}
+
+.btn-container .job-btn {
+    display: block;
+    margin-bottom: 25px;
+    border-style: none;
+    background: var(--clr-gray-9);
+    padding-inline: 16px 8px;
+    padding-block: 8px 8px;
+    width: 124px;
+
+
+    &:active {
+        border-left: 2px solid var(--clr-red-light);
+        background: var(--clr-gray-9);
+        padding-inline: 16px 8px;
+        padding-block: 8px 8px;
+    }
+
+    &:hover {
+        border-left: 2px solid var(--clr-red-light);
+        background: var(--clr-gray-9);
+        padding-inline: 16px 8px;
+        padding-block: 8px 8px;
+    }
+}
+
+.job-info {
+    
+    display: grid;
+    grid-auto-flow: row;
+    width:var(--fixed-width);
+    place-items: start;
+    text-align: start;
+    padding-inline: 8px 0px;
+    gap: 4px;
+
+    h4 {
+        background: var(--clr-gray-9);
+        padding-inline: 16px 8px;
+        padding-block: 8px 8px;
+    }
+}
+
+.job-desc .duty {
+    width: 360px;
+    padding-inline: 8px 8px;
+    align-items: first baseline;
+}
+
+/*=======   Tabs  Ends =========*/
 
 
 /*======================================   Reponsiveness  ===========================*/
@@ -640,6 +709,14 @@ main .accordian {
     }
 
     /*================================= UI projects =============================*/
+    main{
+        width: var(--max-width);
+        padding: 32px, 32px;
+        justify-content: center;
+        margin: 0, auto;
+    }
+
+
     /*===== Menu  ====*/
     .section-center {
         width: 100%;
@@ -661,6 +738,66 @@ main .accordian {
 
         }
         /*===== Menu End ====*/
+
+
+/*=======   Tabs   =========*/
+.tabs-section{
+    margin-top: 64px;
+}
+.jobs-center{
+   display: grid;
+   grid-template-columns: 96px 1fr;
+   gap: 64px;
+   margin: 64px;
+}
+
+.btn-container .job-btn{
+    display: block;
+    margin-bottom: 25px ;
+    border-style: none;
+    background: var(--clr-gray-9);
+    padding-inline: 16px 8px;
+    padding-block: 8px 8px;
+    width: 124px;
+
+
+    &:active{
+    border-left: 2px solid var(--clr-red-light);
+    background: var(--clr-gray-9);
+    padding-inline: 16px 8px;
+    padding-block: 8px 8px;
+    }
+        &:hover {
+            border-left: 2px solid var(--clr-red-light);
+            background: var(--clr-gray-9);
+            padding-inline: 16px 8px;
+            padding-block: 8px 8px;
+        }
+}
+article .job-info{
+    display: grid;
+    grid-auto-flow: row;
+    width: var(--max-width);
+    place-items: start;
+    text-align: start;
+    padding-inline: 16px 8px;
+    padding-block: 8px 8px;
+    gap: 8px;
+
+    h4{
+        background: var(--clr-gray-9);
+        padding-inline: 16px 8px;
+        padding-block: 8px 8px;
+    }
+}
+.job-desc .duty{ 
+ padding-inline: 8px 8px;
+ align-items: first baseline;
+}
+
+/*=======   Tabs  Ends =========*/
+
+    
 }
 
 @media screen and (min-width:992px) {
