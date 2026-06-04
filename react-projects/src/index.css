@@ -52,7 +52,7 @@
 }
 
 
-/* ===========================Global Style======================= */
+/* =========================== Global Style ======================= */
 
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -649,15 +649,15 @@ main .accordian {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    /* overflow: hidden; */
+    overflow: hidden;
 
 
 }
-.slider{
+article{
     width: 360px;
 }
 
-.slider h4{
+article h4{
     text-transform: uppercase;
     color: var(--clr-red-light);
 }
@@ -732,37 +732,71 @@ main .accordian {
     border-style:none ;
 }
 
-.slider {
+article {
     width: var(--fixed-width);
 }
-.slider {
-    /* position: absolute; 
+article {
+    position: absolute; 
     top: 0;
-    left: 0; */
+    left: 0;
     width: 100%;
     height: 100%;
-    /* opacity: 0; */
+    opacity: 0;
     transition: var(--trans);
     justify-content: center;
     margin: 0, auto;
     text-align: center;
 }
 
-.slider.activeSlide{
+article.activeSlide{
     opacity: 1;
     transform: translateX(0);
 }
-.slider.lastSlide{
+article.lastSlide{
     transform: translateX(-100%);
 }
-.slider.nextSlider{
-    transform: translateX(100);
+article.nextSlide{
+    transform: translateX(100%);
 }
-
-
-
 /*=======  Sliders  Ends =========*/
 
+/*=======  lorem Iplsum =========*/
+body:has(.lorem-center){
+    display: flex;
+   place-content: center center;
+   padding-block: 4rem;
+}
+.lorem-center{
+    width: 100%;
+    max-width: 80dvw;
+    display: flex;
+    flex-direction: column;
+    place-content: center center;
+    height: auto;
+    padding-block: 4rem;
+    padding-inline: 2rem;
+    background-color: rgba(212, 220, 227, 0.386);
+}
+.lorem-center .lorem-ipsum{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    max-width: fit-content;
+    gap:8px;
+    height: auto;
+    margin-block: 2rem;
+    #amount{
+        height: 32px;
+        padding-inline: 1rem;
+    }
+}
+
+.lorem-center .lorem-text{
+    max-width: fit-content;
+}
+/*=======  lorem Iplsum Ends =========*/
 
 /*======================================   Reponsiveness  ===========================*/
 @media screen and (min-width:768px) {
@@ -930,6 +964,27 @@ article .job-info{
     
 
 /*=======  Sliders  =========*/
+
+/* .title span {
+    font-size: 1.85rem;
+    color: var(--clr-red-light);
+    margin-right: 1rem;
+    font-weight: 700;
+}
+
+.slider-center {
+    position: relative;
+    width: 80vw;
+    max-width: 800px;
+    height: 450px;
+    padding-top: 2rem;
+    margin-top: 4rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    overflow: hidden;
+}
+
 .text{
     max-width: 45em;
 }
@@ -938,18 +993,18 @@ article .job-info{
     width: 2rem;
     height: 2rem;
     font-size: 1.5rem;
-}
-
+} */
+/* 
 .slider{
-    /* position: absolute;
+    position: absolute;
     top: 0;
-    left: 0; */
+    left: 0;
     width: 700px;
     height: 100%;
-    /* opacity: 0; */
+    opacity: 0;
     transition: var(--trans);
-}
-/*  */
+} */
+/* 
 .slider.activeSlide{
     opacity: 1;
     transform: translateX(0);
@@ -959,7 +1014,7 @@ article .job-info{
 }
 .slider.nextSlide{
     transform: translateX(100);
-}
+} */
 
 
 /*=======  Sliders  Ends =========*/
@@ -1161,14 +1216,14 @@ section {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
-.slider {
+article {
     width: 360px;
 }
 
-.slider h4 {
+.article h4 {
     text-transform: uppercase;
     color: var(--clr-red-light);
 }
@@ -1249,30 +1304,30 @@ section {
     border-style: none;
 }
 
-.slider {
-    /* position: absolute; 
+article {
+    position: absolute; 
     top: 0;
-    left: 0; */
+    left: 0;
     width: 800px;
     height: 100%;
-    /* opacity: 0; */
+    opacity: 0;
     transition: var(--trans);
     justify-content: center;
     margin: 0, auto;
     text-align: center;
 }
 
-.slider.activeSlide {
+article.activeSlide {
     opacity: 1;
     transform: translateX(0);
 }
 
-.slider.lastSlide {
+article.lastSlide {
     transform: translateX(-100%);
 }
 
-.slider.nextSlider {
-    transform: translateX(100);
+article.nextSlide {
+    transform: translateX(100%);
 }
     /*=======  Sliders  Ends =========*/
 }

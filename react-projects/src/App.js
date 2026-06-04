@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./projects/07-slider/Setup";
+import Setup from "./projects/08-lorem-ipsum/Setup";
 
 function App() {
   return(

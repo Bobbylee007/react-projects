@@ -9,6 +9,25 @@ const Slider = () => {
   const [index, setIndex] = useState(0);
   //useEffect to hold functionality that will change dynamically
 
+  useEffect(() => {
+    const lastIndex = people.length - 1;
+    if (index < 0) {
+      setIndex(lastIndex);
+    }
+       if (index > lastIndex) {
+         setIndex(0);
+       }
+  }, [index, people]);
+
+  useEffect(()=>{
+    let slider = setInterval(() => {
+      setIndex(index + 1)
+    }, 3000);
+
+    return () => clearInterval(slider)
+
+  },[index])
+  
   return (
     <section className="slider-content">
       <div className="title">
@@ -17,11 +36,21 @@ const Slider = () => {
         </h2>
       </div>
       <div className="slider-center">
-        {people.map((person, index) => {
+        {people.map((person, personIndex) => {
           const { id, img, name, title, quote } = person;
           //more stuff coming up
+          let position = "nextSlide";
+          if (personIndex === index) {
+            position = "activeSlide";
+          }
+          if (
+            personIndex === index - 1 ||
+            (index === 0 && personIndex === people.length - 1)
+          ) {
+            position = "lastSlide";
+          }
           return (
-            <article key={id} className="slider">
+            <article key={id} className={position}>
               <img src={img} alt={name} className="slider-img" />
               <h4>{name}</h4>
               <p className="title">{title}</p>
@@ -30,10 +59,10 @@ const Slider = () => {
             </article>
           );
         })}
-        <button className="prev">
+        <button className="prev" onClick={() => setIndex(index - 1)}>
           <FiChevronLeft />
         </button>
-        <button className="next">
+        <button className="next" onClick={() => setIndex(index + 1)}>
           <FiChevronRight />
         </button>
       </div>
