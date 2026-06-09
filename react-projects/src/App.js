@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./projects/08-lorem-ipsum/Setup";
+import Setup from "./projects/09-color-generator/Setup";
 
 function App() {
   return(
