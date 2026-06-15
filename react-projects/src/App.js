@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./projects/09-color-generator/Setup";
+import Setup from "./projects/10-grocery-bud";
 
 function App() {
   return(
