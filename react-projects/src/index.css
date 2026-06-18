@@ -814,7 +814,7 @@ body:has(.lorem-center){
 
 /*======= Grocery =========*/
 
-body:has(.grocery-container) {
+body:has(.grocery) {
     display: flex;
     place-content: start center;
     padding-block: 4rem;
@@ -834,33 +834,95 @@ body:has(.grocery-container) {
     display: grid;
     place-items: center;
     padding-inline: 1rem;
-    margin: 1.5rem;
-    
 }
 .groceryInput-control{
     margin: 1.5rem;
 }
 .clear-btn{
+    max-width: fit-content;
     padding: 0.5rem ;
     border-style: none;
     color: var(--clr-red-light);
     background-color: var(--clr-gray-10);
+    cursor: pointer;
+    &:hover{
+    color: var(--clr-red-light);
+        border: 1px solid
+
+    }
+
 }
  .submit-btn{
     max-width: fit-content;
-    padding: 0.5rem;
+    padding: 0.7rem;
+    height: 42px;
     border-style: none;
     color: var(--clr-gray-2);
     background-color: var(--clr-primary-7);
+    text-transform: capitalize;
     cursor: pointer;
+        &:hover {
+                border: 1px solid var(--clr-primary-2)
+            }
 }
 .grocery-input{
     background-color: var(--clr-primary-9);
     border-style: none;
-    width: 350px;
-    height: 32px;
+    width: 330px;
+    height:42px;
     padding: 0.8rem;
 }
+.grocery-list{
+    width: 100%;
+    max-width:400px ;
+}
+.grocery-item{
+    max-width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+.grocery-title{
+    font-weight: 600;
+    text-transform: capitalize;
+
+}
+.btn-container{
+    display: flex;
+    flex-direction: row;
+    gap:8px;
+    padding: 0.5rem;
+   
+}
+.edit-btn{
+    color: green;
+    border-style: none;
+}
+.delete-btn{
+    color: red;
+   border-style: none;
+}
+
+.alert{
+    text-align: center;
+    text-transform: capitalize;
+    padding-block: 0.5rem;
+    height: auto;
+}
+.alert-success{
+    text-align: center;
+    background-color: rgb(213, 246, 213);
+    color: rgb(12, 25, 12);
+
+}
+.alert-danger {
+    text-align: center;
+    background-color: rgb(255, 213, 213);
+    color: rgb(21, 4, 3);
+}
+
+
 
 /*======================================   Reponsiveness  ===========================*/
 @media screen and (min-width:768px) {
