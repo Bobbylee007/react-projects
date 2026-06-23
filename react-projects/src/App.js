@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./projects/10-grocery-bud";
+import Setup from "./projects/11-NavBar/Setup";
 
 function App() {
   return(

@@ -62,7 +62,7 @@ body {
     line-height: 1.5;
     font-size: 0.875rem;
     padding: auto;
-    place-items: center;
+    /* place-items: center; */
 }
 
 /* main {
@@ -119,6 +119,7 @@ ul {
 a {
     text-decoration: none;
     text-align: start;
+    text-transform: capitalize;
 }
 
 .container {
@@ -903,7 +904,6 @@ body:has(.grocery) {
     color: red;
    border-style: none;
 }
-
 .alert{
     text-align: center;
     text-transform: capitalize;
@@ -922,7 +922,41 @@ body:has(.grocery) {
     color: rgb(21, 4, 3);
 }
 
+/*=======NavBar========*/
+.nav-center{
+    background-color: #fff;
+    box-shadow: 0px 0.5px 24px rgba(0, 0, 0, 0.165);
+}
+.nav-center .nav-header .nav-toggle{
+    display: none;
+}
 
+.nav-center, 
+.nav-header,
+.links,
+.social-icon{
+    width: 100%;
+    max-width: 100dvw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+@media(max-width:48em){
+    .nav-center{
+        display: block;
+    }
+     .social-icon{
+        display: none;
+    }
+  .links, li{
+            display: block;
+        }
+    .nav-center .nav-header .nav-toggle{
+        display: block;
+    }
+}
 
 /*======================================   Reponsiveness  ===========================*/
 @media screen and (min-width:768px) {
