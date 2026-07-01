@@ -1,10 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { FaBars, FaTwitter } from "react-icons/fa";
 import { links, social } from "./data";
 import logo from "../../assets/logo/xzegon.svg";
 
 const NavBar = () => {
   const [showLinks, setShowLinks] = useState(false);
+  const linksContainerRef =useRef(null)
+  const linksRef = useRef(null);
+  useEffect(()=>{
+    const linksHeight = linksRef.current.getBoundingClientRect().height
+    // console.log(linksHeight);
+   
+    
+    if (showLinks) {
+      linksContainerRef.current.style.height=`${linksHeight}px`
+    }
+    else{
+      linksContainerRef.current.style.height ="0px"
+    }
+    
+  },[showLinks])
+
   return (
     <nav>
       <div className="nav-center">
@@ -17,7 +33,10 @@ const NavBar = () => {
             <FaBars />
           </button>
         </div>
-        {showLinks && (
+        {/* this approach works if we only clicking 
+        but it wiil not work if animating 
+        cause we are mount & umounting component */}
+        {/* {showLinks && (
           <div className="links-container show-container">
             <ul className="links">
               {links.map((link) => {
@@ -30,8 +49,38 @@ const NavBar = () => {
               })}
             </ul>
           </div>
-        )}
+        )} */}
 
+        {/* 2nd approach for animating */}
+        {/* <div
+          className={`${showLinks ? "links-container show-container" : "links-container"}`}
+        >
+          <ul className="links">
+            {links.map((link) => {
+              const { id, url, text } = link;
+              return (
+                <li key={id}>
+                  <a href={url}>{text}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </div> */}
+
+        {/* increasing links hieght dynamically */}
+        <div
+          className='links-container' ref={linksContainerRef}>
+          <ul className="links" ref={linksRef}>
+            {links.map((link) => {
+              const { id, url, text } = link;
+              return (
+                <li key={id}>
+                  <a href={url}>{text}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
         <ul className="social-icon">
           {social.map((sociaIcon) => {
             const { id, url, icon } = sociaIcon;
