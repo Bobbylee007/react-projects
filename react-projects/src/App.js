@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./projects/11-NavBar/Setup";
+import Setup from "./projects/12-sidebar-modal/Setup";
 
 function App() {
   return(

@@ -63,6 +63,7 @@ body {
     font-size: 0.875rem;
     padding: auto;
     /* place-items: center; */
+   
 }
 
 /* main {
@@ -1012,7 +1013,152 @@ body:has(.grocery) {
         height: 10rem;
     }
 }
+/*=======NavBar ends========*/
 
+
+/*=======modal========*/
+.modal-overlay{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    min-height: 100%;
+    position: absolute;
+    background: #3b3a3a79;
+    justify-content: center;
+    align-items: center;
+}
+.modal-overlay.show-modal{
+    display: flex;
+}
+
+.modal-content.show-modal {
+    display: none;
+}
+.modal-content {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    width:100%;
+    max-width:320px;
+    min-height: 200px;
+    transform: translateX(-50%);
+    background: var(--clr-white);
+    justify-content: center;
+    align-items: center;
+    padding: 0.25em 1rem;
+    border-radius: var(--rd-corners);
+    text-transform: capitalize;
+    box-shadow: 0px 0px 8px;
+}
+.close-model-btn{
+    position: absolute;
+    background-color: transparent;
+    color: var(--clr-red-dark);
+    border: none;
+    top: 12px;
+    right: 12px;
+}
+.modal-content h3 {
+    margin-bottom: 0;
+    color: var(--clr-gray-2);
+}
+/*=======modal end========*/
+
+/*=======sidebar========*/
+.sidebar-toggle{
+    border: none;
+    width: 32px;
+    height: 32px;
+    color: var(--clr-primary-5);
+}
+.dashboard{ 
+    height: 100%;
+    display: flex;
+    /*grid-template-columns: 1fr 1fr;
+    grid-template-rows:auto auto;
+    grid-template-areas:
+    "sidebar home"
+    "sidebar modal modal modal";
+    */
+}
+.sidebar {
+    position: absolute;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    width: 100%;
+    height: 100dvh;
+    max-width: 350px;
+    background-color: var(--clr-primary-9);
+    padding-block: 1rem;
+    
+}
+/* .sidebar.show-sidebar{
+    display: none;
+} */
+.sidebar-hearder{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding-inline: 1rem;
+    button{
+        border-style: none;
+        width: 32px;
+        height: 32px;
+        color: red;
+    }
+}
+.sidebar-links{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-block-end: 14rem;
+}
+.sidebar-links li{
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    align-content: baseline;
+    transition: var(--trans);
+  
+    a{
+        display: flex;
+        flex-direction: row;
+        place-items: center;
+        gap: 1rem;
+        transition: var(--trans);
+    }
+     
+}
+li:hover a{
+background-color: var(--clr-primary-8);
+margin-bottom: 0.5rem;
+padding-inline: 1rem;
+padding-block: 0.5rem;
+align-content: baseline;
+}
+.social-icons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap:0.5rem
+}
+.btn-secondary{
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 70px);
+    text-transform:uppercase ;
+    color: white;
+    border: none;
+    border-radius: var(--rd-corners);
+    background: black;
+    padding-inline: 1.5rem;
+    padding-block: 0.5rem;
+}
+main:has(.sidebar-toggle){
+    padding: 1.5rem;
+}
 /*======================================   Reponsiveness  ===========================*/
 @media screen and (min-width:768px) {
     h1 {
