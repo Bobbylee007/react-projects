@@ -6,8 +6,12 @@ const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openSiderbar = () => {
+  const openSidebar = () => {
     setIsSidebarOpen(true);
+  };
+
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
   };
 
   const openModal = () => {
@@ -17,9 +21,6 @@ const AppProvider = ({ children }) => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
-  const closeSidebar = () => {
-    setIsModalOpen(false);
-  };
 
   return (
     <AppContext.Provider
@@ -27,7 +28,7 @@ const AppProvider = ({ children }) => {
         isModalOpen,
         isSidebarOpen,
         openModal,
-        openSiderbar,
+        openSidebar,
         closeModal,
         closeSidebar,
       }}
