@@ -930,7 +930,7 @@ body:has(.grocery) {
     display: flex;
     justify-content: space-between;
 }
-.nav-header .nav-toggle{
+.nav-center .nav-header .nav-toggle{
     display: none;
 }
 
@@ -1156,6 +1156,20 @@ main:has(.sidebar-toggle){
 
 
 /*======= submenus ========*/
+.nav-links{
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-between;
+}
+@media(max-width:768px){
+.nav-links {
+        width: 100%;
+        display: block;
+    }
+}
+
 
 /*======= submenus end========*/
 /*======================================   Reponsiveness  ===========================*/
@@ -1506,13 +1520,13 @@ section {
         cursor: pointer;
     }
 
-    .nav-links {
+    /* .nav-links {
         max-width: var(--max-width);
         negative: 0 auto;
         margin-bottom: 4rem;
-        display: grid;
+        display: block;
 
-    }
+    } */
 
     .nav-links a {
         color: var(--clr-gray-5);
