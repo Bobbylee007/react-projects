@@ -15,6 +15,8 @@ const Palletes = ({ rgb, weight, index, hexColor }) => {
         },2000)
         return ()=> clearTimeout(timetout)
     }, [alert])
+
+    
   return (
     <section
       className={`color ${index > 10 && "color-light"}`}

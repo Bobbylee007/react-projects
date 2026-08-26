@@ -802,18 +802,36 @@ body:has(.lorem-center){
 
 
 /*======= palettes =========*/
-/* .palettes{
+.palettes{
     width: 100%;
-        max-width: 80dvw;
-        display: flex;
-        flex-direction: column;
-        place-content: center center;
-        height: auto;
-        padding-block: 4rem;
-        padding-inline: 2rem;
-        background-color: rgba(212, 220, 227, 0.386);
-} */
-
+    max-width: 60dvw;
+    display: flex;
+    flex-direction: column;
+    place-content: center center;
+    height: auto;
+    padding-block: 4rem;
+    padding-inline: 2rem;
+    background-color: rgba(212, 220, 227, 0.386);
+}
+.formControl{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    width: 100%;
+    max-width: fit-content;
+    gap:8px;
+    height: 2.5rem;
+    margin-block: 2rem;
+    padding-inline: 2.5rem;
+    input{
+        height: 32px;
+        padding-inline: 1rem;
+    }
+}
+.color-light{
+    color: var(--clr-gray-10);
+}
 /*======= Grocery =========*/
 
 body:has(.grocery) {
@@ -1166,18 +1184,18 @@ main:has(.sidebar-toggle){
 
 .submenu{
     position: absolute;
-    top: 4rem;
+    top: 3px;
     left: 50%;
+    transform: translateX(-50%);
     width: 100%;
-    max-width: fit-content;
+    max-width: calc(80%/2);
     background-color: var(--clr-white);
     box-shadow: var(--dark-shadow);
+    display: none;
     text-align: center;
     padding: 0.5rem 1rem;
-    transform: translateX(-50%);
     z-index: 3;
     border-radius: var(--rd-corners);
-    display: none;
     transition: var(--trans);
 }
 .submenu::before{
@@ -1187,26 +1205,101 @@ main:has(.sidebar-toggle){
     height: 0;
 }
 .submenu.show{
-    display: block;
+    display: grid;
+   
+}
+.submenu-center{
+    display: grid;
+    grid-template-columns:auto auto;
+    justify-content: start;
+}
+.submenu-center.col-2{
+    display: grid;
+    grid-template-columns:repeat(2, 120px);
+    justify-content: space-between;
+}.submenu-center.col-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    justify-content: space-between;
 }
 
+.submenu-center.col-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 120px);
+    justify-content: space-between;
+}
 .hero{
     width: 100%;
     max-width: 100vw;
-    height: auto;
-    max-height: 100%;
+    height: 100vh;
     position: absolute;
-    top: 15%;
+    top: 40%;
+   
+}
+.hero-center{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    padding-inline: 10vw;
+   
 }
-.side-wrapper{
+ .hero-info {
+    width: 450px;
+    text-align: left;
+    h2{
+        text-align: left;
+    }
+ }
+.sidebar-wrapper{
     width: 100%;
-    max-width: 10vw;
-    height: auto;
+    max-width: 60vw;
+    height: 100vh;
     position: absolute;
     left: 0px;
+    display: none;
+}
+.sidebar-wrapper.show{
+    display: block;
+}
+.sidebars{
+    position: absolute;
+    top: 0px;
+    left: 16px;
+    width: 100%;
+    background-color: var(--clr-gray-10);
+    max-width: 400px;
+    height: 100vh;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    z-index: 10;
+}
+.close-btn{
+    width: 32px;
+    height: 32px;
+
+}
+.sidebar-links{
+    width: 100%;
+    h4{
+        text-align: start;
+    }
+}
+.sidebar-sublinks{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: start;
+   & a svg{
+        margin-right: 8px;
+    }
+
 }
 @media(max-width:768px){
 .nav-links {

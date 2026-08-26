@@ -24,7 +24,8 @@ const Setup = () => {
       <section className="container"></section>
       <h3>color generator</h3>
       <form onSubmit={handleSubmit}>
-        <input
+        <div className="formControl">
+               <input
           type="text"
           value={color}
           onChange={(e) => setColor(e.target.value)}
@@ -34,6 +35,8 @@ const Setup = () => {
         <button className="btn" type="submit">
           submit
         </button>
+        </div>
+   
       </form>
       <section className="colors">
         {list.map((color, index)=>{

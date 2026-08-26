@@ -7,16 +7,23 @@ const Navbar = () => {
   const { openSidebar, openSubmenu, closeSubmenu } = useGlobalContext();
   
   const displaySubmenu = (e) => {
+    console.log(e.target);                              //target a button
     const page = e.target.textContent;
-    const tempBtn = e.target.getBoundingClientRect();
+    const tempBtn = e.target.getBoundingClientRect(); //to get size and location of button
+    console.log(tempBtn);                           // to see the location and size of button target
     const center = (tempBtn.left + tempBtn.right)/2
     const bottom = tempBtn.bottom - 3;
-    console.log(tempBtn);
 
-    openSubmenu(page, {center, bottom});
+    openSubmenu(page, {center, bottom}); // invoking submenu parsing in page location as (center & bottom)
   };
+const handleSubmenu = (e) => {
+  if(!e.target.classList.contains('link-btn')){
+    closeSubmenu()
+  }
+}
+
   return (
-    <nav className="nav">
+    <nav className="nav" onMouseOver={handleSubmenu}>
       <div className="nav-center">
         <div className="nav-header">
           <img src={logo} className="logo" alt="" />
