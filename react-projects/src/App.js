@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./projects/13-submenus/Setup";
+import Setup from "./projects/14-cart/Setup";
 
 function App() {
   return(
