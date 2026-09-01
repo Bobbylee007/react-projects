@@ -1,4 +1,4 @@
-export  const items=[
+ const cartItems=[
   {
     id: 1,
     title: "Samsum Galaxy x7",
@@ -21,3 +21,5 @@ export  const items=[
     amount: 1,
   },
 ];
+
+export default cartItems;
