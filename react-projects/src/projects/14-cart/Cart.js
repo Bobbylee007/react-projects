@@ -17,10 +17,10 @@ const Cart = () => {
   }
 
   return (
-    <main>
+    <>
       <Navbar />
       <CartContainer />
-    </main>
+    </>
   );
 };
 

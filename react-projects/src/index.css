@@ -1301,6 +1301,53 @@ main:has(.sidebar-toggle){
     }
 
 }
+
+
+
+.cart{
+    width: 100%;
+    max-width: 700px;
+    height: 700px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+   
+
+}
+.cart-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.amount-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+.cart-icon{
+    width: 20px;
+        height: 20px;
+        fill: currentColor;
+}
+.cart-total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+    span{
+        margin-left: 30rem;
+    }
+}
+.cart-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    hr{
+        width: 100%;
+        height: 2px;
+    }
+}
 @media(max-width:768px){
 .nav-links {
         width: 100%;

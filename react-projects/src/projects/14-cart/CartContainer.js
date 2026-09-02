@@ -28,7 +28,7 @@ const CartContainer = () => {
      })}
       </div>
       {/* cart footer */}
-      <footer>
+      <footer className="cart-footer">
         <hr />
         <div className="cart-total">
           <h4>
