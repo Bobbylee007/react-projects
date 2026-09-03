@@ -1,9 +1,11 @@
-//setupboiler plate, state: is cuurent state before update, action is what we trying to do
+//setup boilerplate, state: is cuurent state before update, action is what we trying to do
 const reducer = (state, action) => {
+
   // you switch or if statement for reducer function
   if (action.type === "CLEAR_CART") {
     return { ...state, cart: [] };
   }
+
   if (action.type === "REMOVE") {
     // can also make the cart property value a variable and parse it to cart
     return {
@@ -53,7 +55,14 @@ const reducer = (state, action) => {
     total= parseFloat(total.toFixed(2))
     return { ...state, total, amount };
   }
-
+if (action.type === 'LOADING'){
+  return {...state, loading: true}
+}
+//display data
+if (action.type==='DISPLAY ITEMS') {
+  return {...state, cart:action.payload, loading: false}
+  
+}
   return state;
 };
 

@@ -6,7 +6,7 @@ const CartItem = ({id, img, title, price, amount}) => {
   return (
     <div className="cart-item">
       <div className='cart-title'>
-      <img src={img} alt={title} />
+      <img src={img} className='cart-img' alt={title} />
         <div>
         <h4>{title}</h4>
         <h4 className="item-price">{price}</h4>

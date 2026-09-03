@@ -1320,6 +1320,12 @@ main:has(.sidebar-toggle){
     justify-content: space-between;
     margin-bottom: 2rem;
 }
+.cart-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+
+}
 .amount-btn svg {
     width: 20px;
     height: 20px;
@@ -1329,6 +1335,12 @@ main:has(.sidebar-toggle){
     width: 20px;
         height: 20px;
         fill: currentColor;
+}
+.cart-img{
+    width: 100%;
+    max-width: 64px;
+    height: auto;
+    
 }
 .cart-total{
     display: flex;
